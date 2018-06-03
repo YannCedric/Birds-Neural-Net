@@ -12,6 +12,7 @@ To start :
 
  - [x] feed-foward
  - [x] obstacles
+ - [ ] collision detection
  - [ ] main cleanup  
  - [ ] selection based on fitness
  - [ ] crossover
