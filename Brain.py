@@ -4,7 +4,7 @@ class Brain:
     def __init__(self):
         self.input_layers_size = 3
         self.output_layers_size = 1
-        self.hidden_layers_size = 4
+        self.hidden_layers_size = 2
 
         self.input_weights = numpy.random.randn(self.input_layers_size, self.hidden_layers_size)
         self.hidden_weights = numpy.random.randn(self.hidden_layers_size, self.output_layers_size)

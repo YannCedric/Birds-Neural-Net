@@ -1,28 +1,15 @@
 import pygame
+import random
 from Brain import Brain
 
 
-class Bird: 
-    def __init__(self, y, pic):
-        self.brain = Brain()
-        self.x = -10
-        self.y = y
-        self.speed_y = -20
+class Obstacle: 
+    def __init__(self, height):
+        self.x = random.randint(0,height)
         self.speed_x = 3
-        self.acceleration_y = 9
-        self.interval = 0.1
-        self.pic = pic
-        self.fitness = 0
+        # self.y = y
 
     def move(self):
-        old_pos = self.y
-        old_speed_y = self.speed_y
-        acceleration_y = self.acceleration_y
-        time = self.interval
-
-        self.speed_y = old_speed_y + acceleration_y * time
-        self.y = old_pos + old_speed_y*time + acceleration_y*time/2
-
         self.x = self.x + self.speed_x
 
     def jump(self):
@@ -30,7 +17,7 @@ class Bird:
 
     def startover(self):
         self.fitness = 0;
-        self.x = -25
+        self.x = 0
 
     def think(self,top, bottom):
         prediction = self.brain.feedfoward([self.y, top, bottom])
