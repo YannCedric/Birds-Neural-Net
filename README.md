@@ -11,8 +11,9 @@ To start :
 **TO DO:**
 
  - [x] feed-foward
- - [ ] obstacles
+ - [x] obstacles
  - [ ] main cleanup  
  - [ ] selection based on fitness
  - [ ] crossover
  - [ ] mutation
+ - [x] auto-retry
