@@ -25,7 +25,7 @@ clock = pygame.time.Clock()
 birds = []
 obstacles = []
 
-pop_size = 20
+pop_size = 100
 
 def generate_population(number, gen_count):
     popu = []
@@ -114,8 +114,8 @@ while not crashed:
     if pause == False:
         pygame.display.flip()
     
-    if len(birds) == 0:
-        (birds, gen_count) = generate_population(10,generations)
+    if len(birds) < 1:
+        (birds, gen_count) = generate_population(pop_size - len(birds),generations)
         generations = gen_count
 
     gameDisplay.fill(BLUE)
